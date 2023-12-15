@@ -1,0 +1,11 @@
+<h1>Search Results Page</h1>
+<h3>Total Population: <%= @characters.count %></h3>
+
+<h3><%= "Members of the #{@nation}" %>
+<% @characters.first(25).each do |character| %>
+<p>Name: <%= character.name %></p>
+<img src = "<%= character.photo_url %>" alt = "<%= "photo of #{character.name}" %>"> 
+<p>Allies: <%= character.allies %></p>
+<p>Enemies: <%= character.enemies %></p>
+<p>Affiliations: <%= character.affiliation %></p>
+<%end%>
